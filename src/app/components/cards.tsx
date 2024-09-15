@@ -5,32 +5,28 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "@/components/ui/carousel";
+} from "../components/ui/carousel";
 
 function ConnectCarrousel() {
   const positions = [
-    "Back-end",
-    "UI Design",
-    "UX Design",
-    "Front-end",
-    "Full Stack",
-    "Software Engineer",
-    "Graphic Designer",
-    "Recruiter",
-    "Officer",
-    "Chief Officer",
-    "CEO",
-    "Marketing",
-    "Product Manager",
+    "Balance",
+    "Meditación",
+    "Salud",
+    "Paz mental",
+    "Relajamiento corporal",
+    "Desintoxicación",
+    "Siéntete bien",
+    "Rejuvenecimiento",
+    "Tratamientos corporales",
+    "Alivio del estrés",
+    "Bienestar",
+    "Cuidado personal",
   ];
 
   return (
-    <div className="flex flex-col gap-6 md:gap-14 pt-10 pb-6 md:pt-28 md:pb-11">
-      <h2 className="text-center text-[32px] md:text-6xl max-w-6xl mx-auto px-4 ">
-        We connect you with your goal, we prepare you for the future
-      </h2>
+    <div className="flex flex-col gap-6 pb-4 pt-7 bg-gradient-to-r from-cyan-300 via-cyan-200 to-cyan-100 items-center justify-center">
       <Carousel
-        className="w-full pt-11 "
+        className="w-full pt-4 pb-4"
         opts={{
           loop: true,
         }}
@@ -38,14 +34,15 @@ function ConnectCarrousel() {
           AutoScroll({
             startDelay: 0,
             stopOnInteraction: false,
+            speed: 0.9,
           }),
         ]}
       >
         <CarouselContent>
           {[...positions, ...positions].map((name, index, _array) => (
             <CarouselItem key={index} className="basis-22">
-              <div className="py-4 px-6 bg-gray-800 rounded-2xl inline-block">
-                <h6 className="text-gray-400 text-medium text-xs md:text-[16px]">{name}</h6>
+              <div className="py-5 px-6 bg-cyan-600 rounded-2xl inline-block">
+                <h6 className="text-white text-medium text-xs md:text-[16px]">{name}</h6>
               </div>
             </CarouselItem>
           ))}
